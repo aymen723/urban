@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+// import logo from "./src/images/logo.png";
 // import logo from "./components/images/logo.png";
 function Home() {
   return (
@@ -7,7 +8,7 @@ function Home() {
       <div className="header">
         <div className="headbar">
           <div className="buttons">
-            <img src="/components/images/logo.png"></img>
+            <img src={"./src/images/logo.png"}></img>
             <a>Home</a>
             <a>About Us</a>
             <a>Service</a>
@@ -21,10 +22,12 @@ function Home() {
         </div>
         <div className="content">
           <div className="titles">
-            <h3>Nous vous aidons</h3>
-            <h1>À Construire Votre </h1>
-            <h3>Étude De Faisabilité</h3>
-            <button></button>
+            <div className="titles_content">
+              <h3>Nous vous aidons</h3>
+              <h1>À Construire Votre </h1>
+              <h3>Étude De Faisabilité</h3>
+              <button></button>
+            </div>
           </div>
           <div className="images">
             <img src=""></img>

@@ -67,6 +67,10 @@
   justify-content: center;
 }
 
+.titles_content {
+  width: 100%;
+}
+
 .images {
   border: 1px solid yellow;
   height: 700px;
