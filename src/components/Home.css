@@ -1,0 +1,74 @@
+.container {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  border: 1px solid red;
+  width: 1920px;
+  /* height: 2945px; */
+  background-color: #7739e2;
+}
+
+.headbar {
+  border: 1px solid red;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons {
+  border: 1px solid black;
+  width: 70%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 100px;
+}
+
+.Sign {
+  border: 1px solid white;
+  height: 70px;
+  width: 14%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  background-color: transparent;
+  border: 2px solid white;
+  width: 174px;
+  height: 40px;
+  border-radius: 40px;
+  color: white;
+}
+.content {
+  border: 1px solid white;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.titles {
+  border: 1px solid black;
+  height: 374px;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.images {
+  border: 1px solid yellow;
+  height: 700px;
+  width: 55%;
+}
