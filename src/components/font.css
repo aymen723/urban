@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "pro_text";
+  src: local("FontsFree-Net-SFProText-Regular"),
+    url("/src/res/font_pro_text.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins-Regular"), url("/src/res/Poppins-Regular.ttf");
+}
