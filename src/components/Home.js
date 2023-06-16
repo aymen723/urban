@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import { Link } from "react-router-dom";
 // import logo from "./src/images/logo.png";
 // import logo from "./components/images/logo.png";
 function Home() {
@@ -17,7 +18,9 @@ function Home() {
             <a>Contact Us</a>
           </div>
           <div className="Sign">
-            <button className="btn">Sign Up</button>
+      
+          <Link to="/login" ><button className="btn">Sign Up</button></Link>
+
           </div>
         </div>
         <div className="content">

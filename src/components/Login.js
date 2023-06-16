@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./login.css";
 import logo from "./logo.png";
-
+import axios from "axios";
+import { Link } from "react-router-dom";
 function Login() {
+
+  const[email,setemail]=useState("");
+  const[password,setpassword]=useState("");
+
+
+
+  function login(){
+
+     const info = {  
+      email:email,
+      password:password
+    }
+
+    // console.log(logininfo);
+    axios.post("http://localhost:8080/Connecter",info).then((response)=>{
+      console.log(response)
+    })
+
+  }
   return (
     <div className="login_container">
       <div className="background">
@@ -25,21 +45,29 @@ function Login() {
             <div className="box">
               <div className="input">
                 <div className="label_inp">
-                  <label className="header_inp">Address E-Mail</label>
+                  <label className="header_inp"
+                >Address E-Mail</label>
                 </div>
-                <input className="inp"></input>
+                <input className="inp"  onChange={(e)=>{
+                    setemail(e.target.value)
+                  }}></input>
               </div>
               <div className="input">
                 <div className="label_inp">
-                  <label className="header_inp">Mot de Passe</label>
+                  <label className="header_inp" >Mot de Passe</label>
                 </div>
-                <input className="inp" type="password"></input>
+                <input className="inp" type="password" onChange={(e)=>{
+                    console.log(e.target.value)
+                    setpassword(e.target.value)
+                  }}></input>
               </div>
               <div className="btn_box">
-                <button className="btn_create_account">créer un compte</button>
+                <button className="btn_create_account" onClick={()=>{
+                  login();
+                }}>créer un compte</button>
                 <div className="btn_label">
                   <label className="footer_inp">
-                    Vous avez un compte?<a href="google.com">Cliquez ici</a>
+                    Vous avez un compte?<Link to="/Singup">Cliquez ici</Link>
                   </label>
                 </div>
               </div>

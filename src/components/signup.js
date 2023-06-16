@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./signup.css";
 import logo from "./logo.png";
+import axios from "axios";
+import { Link } from "react-router-dom";
 function Signup() {
   const [etudaint, setetudaint] = useState(false);
   const [entrepreneur, setentrepreneur] = useState(false);
@@ -9,7 +11,7 @@ function Signup() {
   const [prenoment, setprenoment] = useState("");
   const [entrepriseent, setentrepriseent] = useState("");
   const [emailent, setemailent] = useState("");
-  const [telphonent, settelephonent] = useState("");
+  const [telphonent, settelephonent] = useState(0);
   const [Wilayaent, setwilayaent] = useState("");
   const [passwordent, setpasswordent] = useState("");
 
@@ -33,7 +35,8 @@ function Signup() {
   }
 
   function entrepisehundler(e) {
-    setentrepreneur(e.target.value);
+    console.log(e.target.value);
+    setentrepriseent(e.target.value);
   }
 
   function passwordhundler(e) {
@@ -46,6 +49,25 @@ function Signup() {
     setwilayaent(e.target.value);
   }
 
+
+  function createentrepreneur(e){
+    // e.event.preventDefault();
+    const user = {  
+      name : noment,
+      surname : prenoment,
+      entp_name : entrepriseent,
+      email : emailent,
+      phone : telphonent,
+      password : passwordent,
+      state : Wilayaent
+    }
+
+    axios.post("http://localhost:8080/User/Inscrire",user).then((response)=>{
+      console.log(response)
+    })
+  }
+
+
   return (
     <div className="login_container">
       <div className="background">
@@ -54,7 +76,7 @@ function Signup() {
       <div className="inputs">
         <div className="Back_btn_box">
           <div className="btn_text">
-            <button className="btn_back">aaa</button>
+            <button className="btn_back">{"<"}</button>
             <div className="btn_back_label_box">
               <label className="btn_back_label">retour</label>
             </div>
@@ -215,12 +237,14 @@ function Signup() {
                   </div>
                 </div>
                 <div className="btn_box">
-                  <button className="btn_create_account">
+                  <button className="btn_create_account" onClick={(e)=>{
+                    createentrepreneur(e);
+                  }}>
                     créer un compte
                   </button>
                   <div className="btn_label">
                     <label className="footer_inp">
-                      Vous avez un compte?<a href="google.com">Cliquez ici</a>
+                      Vous avez un compte?<Link to="/login">Cliquez ici</Link>
                     </label>
                   </div>
                 </div>
