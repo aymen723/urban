@@ -2,6 +2,7 @@ import React from "react";
 import "./choice_page.css";
 import shape from "./shape.png";
 import shape_2 from "./shape_2.png";
+import { Link } from "react-router-dom";
 function Choice_page() {
   return (
     <div className="container">
@@ -17,9 +18,11 @@ function Choice_page() {
           <h1 className="title_choice_font">les études de faisabilite</h1>
         </div>
         <div className="box_content">
-          <button className="btn_choice">
-            faisabilité Socio-Environnementale
-          </button>
+          <Link to={"/Selection"}>
+            <button className="btn_choice">
+              faisabilité Socio-Environnementale
+            </button>
+          </Link>
         </div>
         <div className="box_content">
           <button className="btn_choice">faisabilité dans le temps</button>{" "}

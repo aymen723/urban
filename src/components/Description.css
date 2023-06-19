@@ -1,0 +1,21 @@
+.description {
+  border: 1px solid black;
+  width: 100%;
+  height: 100vh;
+  background-color: #7739e2;
+}
+
+.title_description {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question_box {
+  border: 1px solid red;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
