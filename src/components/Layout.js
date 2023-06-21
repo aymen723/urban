@@ -7,6 +7,7 @@ import Select_page from "./Select_page";
 import Profile from "./Profile";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Description from "./Description";
+import Description2 from "./Description2";
 
 function Layout() {
   return (
