@@ -1,10 +1,11 @@
-.container {
+.container_home {
   border: 1px solid black;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .header {
@@ -48,7 +49,6 @@
   height: 40px;
   border-radius: 40px;
   color: white;
-
 }
 .content {
   border: 1px solid white;
@@ -76,4 +76,10 @@
   border: 1px solid yellow;
   height: 700px;
   width: 55%;
+}
+
+.block_2 {
+  border: 1px solid green;
+  width: 1920px;
+  background-color: #7739e2;
 }

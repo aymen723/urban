@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // import logo from "./components/images/logo.png";
 function Home() {
   return (
-    <div className="container">
+    <div className="container_home">
       <div className="header">
         <div className="headbar">
           <div className="buttons">
@@ -18,9 +18,9 @@ function Home() {
             <a>Contact Us</a>
           </div>
           <div className="Sign">
-      
-          <Link to="/login" ><button className="btn">Sign Up</button></Link>
-
+            <Link to="/login">
+              <button className="btn">Sign Up</button>
+            </Link>
           </div>
         </div>
         <div className="content">
@@ -29,7 +29,7 @@ function Home() {
               <h3>Nous vous aidons</h3>
               <h1>À Construire Votre </h1>
               <h3>Étude De Faisabilité</h3>
-              <button></button>
+              <button className="btn">Obtenez votre Étude</button>
             </div>
           </div>
           <div className="images">
@@ -38,7 +38,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="block_2"></div>
+      <div className="block_2">a</div>
     </div>
   );
 }

@@ -4,30 +4,30 @@ import { useState } from "react";
 import "./Description.css";
 import { createRoot } from "react-dom/client";
 import Select from "react-select";
+import { TextField } from "@mui/material";
 
 function Description() {
   var [currentQuestion, setCurrentQuestion] = useState(0);
   const [formaulaire, setformaulaire] = useState([]);
-  const [selected, setselected] = useState([]);
+  // const [selected, setselected] = useState([]);
 
   const [selectedoption, setselectedoption] = useState([]);
   const [input, setinput] = useState("");
   const prevbtn = useRef();
   const nextbtn = useRef();
-  const select = useRef();
-  const checked = useRef();
 
-  function hundlecheckbox(e) {
-    // console.log(e.target.value);
-    // setselected();
-    // answers[currentQuestion] = [...e.target.value];
-    setselected((oldArray) => [...oldArray, e]);
-    // selected[currentQuestion] = e.target.value;
-  }
+  // function hundlecheckbox(e) {
+  //   console.log(e.target.value);
+  //   setselected();
+  //   answers[currentQuestion] = [...e.target.value];
+  //   setselected((oldArray) => [...oldArray, e]);
+  //   selected[currentQuestion] = e.target.value;
+  // }
 
   const questions = [
     {
       text: "Le titre de project?",
+      label: "test",
       // options: [
       //   { value: "chocolate", label: "Chocolate" },
       //   { value: "strawberry", label: "Strawberry" },
@@ -38,6 +38,8 @@ function Description() {
     },
     {
       text: "La situation enacte de projet ?",
+      label: "test",
+
       // options: [
       //   { value: "chocolate", label: "Chocolate" },
       //   { value: "strawberry", label: "Strawberry" },
@@ -48,6 +50,8 @@ function Description() {
     },
     {
       text: "La durée prévue ?",
+      label: "test",
+
       options: [
         { value: "1 a 2 ans", label: "1 a 2 ans" },
         { value: "2 a 3 ans", label: "2 a 3 ans" },
@@ -56,9 +60,12 @@ function Description() {
       ],
       addinp: false,
       addselect: true,
+      isMulti: false,
     },
     {
       text: "Le marche de votre projet ?",
+      label: "test",
+
       options: [
         { value: "local", label: "local" },
         { value: "national", label: "national" },
@@ -66,15 +73,21 @@ function Description() {
       ],
       addinp: false,
       addselect: true,
+      isMulti: true,
     },
     {
       text: "Le type de financement?",
+      label: "test",
+
       options: [{ value: "personnel", label: "personnel" }],
       addinp: true,
       addselect: true,
+      isMulti: false,
     },
     {
       text: "Quelle est l'importance de ce projet et quelle seront ses avantages pour la sociéte ?",
+      label: "test",
+
       options: [
         {
           value: "ofire des poste de travail",
@@ -91,9 +104,12 @@ function Description() {
       ],
       addinp: false,
       addselect: true,
+      isMulti: true,
     },
     {
       text: "Que pensez-vous que votre projet crée comme des risques pour la societe ?",
+      label: "test",
+
       options: [
         {
           value: "Risques de securite",
@@ -110,9 +126,12 @@ function Description() {
       ],
       addinp: false,
       addselect: true,
+      isMulti: true,
     },
     {
       text: "le sexe ?",
+      label: "test",
+
       options: [
         {
           value: "male",
@@ -125,9 +144,12 @@ function Description() {
       ],
       addinp: false,
       addselect: true,
+      isMulti: false,
     },
     {
       text: "La willaya ?",
+      label: "test",
+
       // options: [
       //   {
       //     value: "male",
@@ -140,9 +162,12 @@ function Description() {
       // ],
       addinp: false,
       addselect: true,
+      isMulti: false,
     },
     {
       text: "La Commune ?",
+      label: "test",
+
       // options: [
       //   {
       //     value: "male",
@@ -155,9 +180,12 @@ function Description() {
       // ],
       addinp: true,
       addselect: false,
+      isMulti: false,
     },
     {
       text: "Quelle est votre revenue menusuelle  ?",
+      label: "test",
+
       // options: [
       //   {
       //     value: "male",
@@ -170,9 +198,12 @@ function Description() {
       // ],
       addinp: true,
       addselect: false,
+      isMulti: false,
     },
     {
       text: "Avez-vous l'habitude d'aller a faisabot ?",
+      label: "test",
+
       options: [
         {
           value: true,
@@ -185,9 +216,12 @@ function Description() {
       ],
       addinp: false,
       addselect: true,
+      isMulti: false,
     },
     {
       text: "  Allez vous seul ou en famille si vous y allez en famille combien de personnes?",
+      label: "test",
+
       // options: [
       //   {
       //     value: "male",
@@ -200,9 +234,12 @@ function Description() {
       // ],
       addinp: true,
       addselect: false,
+      isMulti: false,
     },
     {
       text: "  combien avez vous l'habitude de payer dans telles equipement par personnes ?",
+      label: "test",
+
       // options: [
       //   {
       //     value: "male",
@@ -215,9 +252,12 @@ function Description() {
       // ],
       addinp: true,
       addselect: false,
+      isMulti: false,
     },
     {
       text: "pensez vous que la situation de ce projet est un emplacement ideal pour celui-ci ?",
+      label: "test",
+
       options: [
         {
           value: true,
@@ -230,9 +270,12 @@ function Description() {
       ],
       addinp: false,
       addselect: true,
+      isMulti: false,
     },
     {
       text: "pensez vous que ce project aura un impact au niveau ?",
+      label: "test",
+
       // options: [
       //   {
       //     value: true,
@@ -245,9 +288,12 @@ function Description() {
       // ],
       addinp: true,
       addselect: false,
+      isMulti: false,
     },
     {
       text: "Que pensez vous du bien-fondé de ce projet ?",
+      label: "test",
+
       // options: [
       //   {
       //     value: true,
@@ -260,9 +306,12 @@ function Description() {
       // ],
       addinp: true,
       addselect: false,
+      isMulti: false,
     },
     {
       text: "Que pensez-vous des risques que ce projet laissera ?",
+      label: "test",
+
       // options: [
       //   {
       //     value: true,
@@ -275,9 +324,12 @@ function Description() {
       // ],
       addinp: true,
       addselect: false,
+      isMulti: false,
     },
     {
       text: "vous voyez vous etre un jour investisseur dans ce projet ?",
+      label: "test",
+
       options: [
         {
           value: true,
@@ -290,6 +342,7 @@ function Description() {
       ],
       addinp: false,
       addselect: true,
+      isMulti: false,
     },
   ];
 
@@ -376,35 +429,27 @@ function Description() {
       setCurrentQuestion(currentQuestion + 1);
       console.log(currentQuestion);
     }
-    const test = [
-      {
-        value: input,
-        label: input,
-      },
-    ];
-    setselectedoption((oldArray) => [...oldArray, input]);
-    console.log("input ", test);
 
+    console.log(selectedoption);
+
+    const testanswer = selectedoption.map((option) => {
+      return option.value;
+    });
+
+    if (input != "") {
+      testanswer.push(input);
+    }
     const element = {
       questions: questions[currentQuestion].text,
-      answers: selectedoption,
-      answer_inp: input,
+      answers: testanswer,
     };
 
-    // console.log(checked.current.value);
-
-    // setanswers((oldArray) => [...oldArray, element]);
-    // console.log(answers);
-
-    // console.log("selected ", select.current);
     formaulaire[currentQuestion] = element;
     console.log("formaulaire ", formaulaire);
     console.log(" elements ", element);
 
     setselectedoption([]);
     setinput("");
-
-    // console.log(select.current);
   }
   function perviousquestion() {
     if (currentQuestion > 0) {
@@ -427,40 +472,61 @@ function Description() {
           </div>
 
           <div className="options_box">
-            {questions[currentQuestion].addselect ? (
-              <div>
+            <div className="selector_inp">
+              {questions[currentQuestion].addselect ? (
                 <Select
-                  // defaultValue={[colourOptions[2], colourOptions[3]]}
-                  isMulti
+                  isMulti={questions[currentQuestion].isMulti}
                   name="colors"
                   // key={option.id}
+                  // questions[currentQuestion].isMulti
                   onChange={(e) => {
-                    setselectedoption(e);
+                    // console.log(e.value);
+                    if (questions[currentQuestion].isMulti == false) {
+                      const test = [
+                        {
+                          value: e.value,
+                          label: e.value,
+                        },
+                      ];
+                      console.log(test);
+                      setselectedoption(test);
+                    } else {
+                      setselectedoption(e);
+                    }
+
+                    // setselectedoption(e);
+                    // console.log(e[0].value);
                   }}
                   value={selectedoption}
                   options={questions[currentQuestion].options}
-                  className="basic-multi-select"
-                  classNamePrefix="select"
+                  className="selector"
+                  // styles={}
+                  // className="basic-multi-select"
+                  // classNamePrefix="select"
                 />
-              </div>
-            ) : (
-              <div>walo</div>
-            )}
-            {questions[currentQuestion].addinp ? (
-              <div>
-                {" "}
-                <input
-                  className=""
+              ) : (
+                <div>walo</div>
+              )}
+            </div>
+            <div className="selector_inp">
+              {questions[currentQuestion].addinp ? (
+                <TextField
+                  id="outlined-basic"
+                  label={questions[currentQuestion].label}
+                  variant="outlined"
+                  className="descr_inp"
                   value={input}
                   onChange={(e) => {
                     setinput(e.target.value);
+
                     console.log(e.target.value);
                   }}
-                ></input>
-              </div>
-            ) : (
-              <div>walo</div>
-            )}
+                ></TextField>
+              ) : (
+                <div>walo</div>
+              )}
+            </div>
+
             {/* {questions[currentQuestion].map((option) => {
               return (
                 <div>
@@ -494,21 +560,21 @@ function Description() {
           <div className="navigate_btn">
             <button
               className="btn_nav"
-              onClick={() => {
-                nextquestion();
-              }}
-              ref={nextbtn}
-            >
-              next
-            </button>
-            <button
-              className="btn_nav"
               ref={prevbtn}
               onClick={() => {
                 perviousquestion();
               }}
             >
-              pervious
+              Pervious
+            </button>
+            <button
+              className="btn_nav"
+              onClick={() => {
+                nextquestion();
+              }}
+              ref={nextbtn}
+            >
+              Next
             </button>
           </div>
         </div>
