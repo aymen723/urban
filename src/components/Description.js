@@ -5,6 +5,7 @@ import "./Description.css";
 import { createRoot } from "react-dom/client";
 import Select from "react-select";
 import { TextField } from "@mui/material";
+import axios from "axios";
 
 function Description() {
   var [currentQuestion, setCurrentQuestion] = useState(0);
@@ -150,16 +151,216 @@ function Description() {
       text: "La willaya ?",
       label: "test",
 
-      // options: [
-      //   {
-      //     value: "male",
-      //     label: "male",
-      //   },
-      //   {
-      //     value: "femalle",
-      //     label: "femalle",
-      //   },
-      // ],
+      options: [
+        {
+          value: "Adrar",
+          label: "Adrar",
+        },
+        {
+          value: "Chlef",
+          label: "Chlef",
+        },
+        {
+          value: "Laghouat",
+          label: "Laghouat",
+        },
+        {
+          value: "Oum El Bouaghi",
+          label: "Oum El Bouaghi",
+        },
+        {
+          value: "Batna",
+          label: "Batna",
+        },
+        {
+          value: "Béjaïa",
+          label: "Béjaïa",
+        },
+        {
+          value: "Biskra",
+          label: "Biskra",
+        },
+        {
+          value: "Bechar",
+          label: "Bechar",
+        },
+        {
+          value: "Blida",
+          label: "Blida",
+        },
+        {
+          value: "Bouira",
+          label: "Bouira",
+        },
+        {
+          value: "Tamanrasset",
+          label: "Tamanrasset",
+        },
+        {
+          value: "Tbessa",
+          label: "Tbessa",
+        },
+        {
+          value: "Tlemcen",
+          label: "Tlemcen",
+        },
+        {
+          value: "Tiaret",
+          label: "Tiaret",
+        },
+        {
+          value: "Tizi Ouzou",
+          label: "Tizi Ouzou",
+        },
+        {
+          value: "Alger",
+          label: "Alger",
+        },
+        {
+          value: "Djelfa",
+          label: "Djelfa",
+        },
+        {
+          value: "Jijel",
+          label: "Jijel",
+        },
+        {
+          value: "Se9tif",
+          label: "Se9tif",
+        },
+        {
+          value: "Saefda",
+          label: "Saefda",
+        },
+        {
+          value: "Skikda",
+          label: "Skikda",
+        },
+        {
+          value: "Sidi Bel Abbes",
+          label: "Sidi Bel Abbes",
+        },
+        {
+          value: "Annaba",
+          label: "Annaba",
+        },
+        {
+          value: "Guelma",
+          label: "Guelma",
+        },
+        {
+          value: "Constantine",
+          label: "Constantine",
+        },
+        {
+          value: "Medea",
+          label: "Medea",
+        },
+        {
+          value: "Mostaganem",
+          label: "Mostaganem",
+        },
+        {
+          value: "M'Sila",
+          label: "M'Sila",
+        },
+        {
+          value: "Mascara",
+          label: "Mascara",
+        },
+        {
+          value: "Ouargla",
+          label: "Ouargla",
+        },
+        {
+          value: "Oran",
+          label: "Oran",
+        },
+        {
+          value: "El Bayadh",
+          label: "El Bayadh",
+        },
+        {
+          value: "Illizi",
+          label: "Illizi",
+        },
+        {
+          value: "Bordj Bou Arreridj",
+          label: "Bordj Bou Arreridj",
+        },
+        {
+          value: "Boumerdes",
+          label: "Boumerdes",
+        },
+        {
+          value: "El Tarf",
+          label: "El Tarf",
+        },
+        {
+          value: "Tindouf",
+          label: "Tindouf",
+        },
+        {
+          value: "Tissemsilt",
+          label: "Tissemsilt",
+        },
+        {
+          value: "El Oued",
+          label: "El Oued",
+        },
+        {
+          value: "Khenchela",
+          label: "Khenchela",
+        },
+        {
+          value: "Souk Ahras",
+          label: "Souk Ahras",
+        },
+        {
+          value: "Tipaza",
+          label: "Tipaza",
+        },
+        {
+          value: "Mila",
+          label: "Mila",
+        },
+        {
+          value: "Ain Defla",
+          label: "Ain Defla",
+        },
+        {
+          value: "Naama",
+          label: "Naama",
+        },
+        {
+          value: "Ain Temouchent",
+          label: "Ain Temouchent",
+        },
+        {
+          value: "Ghardaia",
+          label: "Ghardaia",
+        },
+        {
+          value: "Relizane",
+          label: "Relizane",
+        },
+        {
+          value: "Djanet",
+          label: "Djanet",
+        },
+        {
+          value: "In Amenas",
+          label: "In Amenas",
+        },
+        {
+          value: "In Guezzam",
+          label: "In Guezzam",
+        },
+        {
+          value: "Ain Salah",
+          label: "Ain Salah",
+        },
+      ],
       addinp: false,
       addselect: true,
       isMulti: false,
@@ -423,8 +624,8 @@ function Description() {
       // if (currentQuestion == 1) {
       //   prevbtn.current.disaled = false;
       // }
-      prevbtn.current.disaled = false;
-      console.log(prevbtn.current.disabled);
+      // prevbtn.current.disaled = false;
+      // console.log(prevbtn.current.disabled);XX
 
       setCurrentQuestion(currentQuestion + 1);
       console.log(currentQuestion);
@@ -440,11 +641,12 @@ function Description() {
       testanswer.push(input);
     }
     const element = {
-      questions: questions[currentQuestion].text,
+      text: questions[currentQuestion].text,
       answers: testanswer,
     };
 
     formaulaire[currentQuestion] = element;
+
     console.log("formaulaire ", formaulaire);
     console.log(" elements ", element);
 
@@ -455,15 +657,58 @@ function Description() {
     if (currentQuestion > 0) {
       console.log(currentQuestion);
       setCurrentQuestion(currentQuestion - 1);
-      if (currentQuestion == 1) {
-        prevbtn.current.disabled = true;
-      }
+      // if (currentQuestion == 1) {
+      //   prevbtn.current.disabled = true;
+      // }
     }
+
+    setselectedoption([]);
+    setinput("");
+  }
+
+  function savedescription() {
+    console.log("saved");
+    console.log(formaulaire);
+    let data = { questoins: formaulaire };
+    console.log(data);
+    axios
+      .post("http://localhost:8080/User/New_Forum", data)
+      .then((response) => {
+        console.log(response);
+      });
+  }
+  function testsession() {
+    // axios
+    //   .get("http://localhost:8080/ses", { withCredentials: true })
+    //   .then((response) => {
+    //     console.log(response);
+    //   });
+
+    axios.interceptors.request.use(
+      (config) => {
+        // Add the 'withCredentials' option to allow sending cookies and authorization headers
+        config.withCredentials = true;
+        return config;
+      },
+      (error) => Promise.reject(error)
+    );
+
+    // Make a request to your API
+    axios
+      .get("http://localhost:8080/ses")
+      .then((response) => {
+        // Handle the response
+        console.log("hna data ", response.data);
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error(error);
+      });
   }
   return (
     <div className="description">
       <div className="title_description">
-        <h1>Description sur le project</h1>
+        <h1 className="title_desc">Description sur le project</h1>
       </div>
       <div className="question_box">
         <div className="questions_container">
@@ -558,16 +803,31 @@ function Description() {
             })} */}
           </div>
           <div className="navigate_btn">
-            <button
-              className="btn_nav"
-              ref={prevbtn}
-              onClick={() => {
-                perviousquestion();
-              }}
-            >
-              Pervious
-            </button>
-            <button
+            {currentQuestion > 0 ? (
+              <button
+                className="btn_nav"
+                ref={prevbtn}
+                onClick={() => {
+                  perviousquestion();
+                }}
+              >
+                Pervious
+              </button>
+            ) : null}
+            {currentQuestion == 13 ? (
+              <button
+                className="btn_nav"
+                style={{ backgroundColor: "green", border: "none" }}
+                onClick={() => {
+                  // savedescription();
+                  testsession();
+                }}
+                // ref={nextbtn}
+              >
+                Enregistrer
+              </button>
+            ) : null}
+            {/* <button
               className="btn_nav"
               onClick={() => {
                 nextquestion();
@@ -575,7 +835,18 @@ function Description() {
               ref={nextbtn}
             >
               Next
-            </button>
+            </button> */}
+            {currentQuestion < 13 ? (
+              <button
+                className="btn_nav"
+                onClick={() => {
+                  nextquestion();
+                }}
+                ref={nextbtn}
+              >
+                Next
+              </button>
+            ) : null}
           </div>
         </div>
       </div>

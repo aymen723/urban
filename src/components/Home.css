@@ -1,6 +1,6 @@
 .container_home {
   border: 1px solid black;
-  width: 100%;
+  /* width: 100%; */
   /* height: 100%; */
   display: flex;
   align-items: center;
@@ -70,6 +70,12 @@
 
 .titles_content {
   width: 100%;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: left;
+  color: #ffffff;
 }
 
 .images {
@@ -82,4 +88,206 @@
   border: 1px solid green;
   width: 1920px;
   background-color: #7739e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box_block2 {
+  width: 80%;
+  border: 1px solid red;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.split {
+  border: 1px solid white;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.service_box {
+  border: 1px solid yellow;
+  width: 90%;
+  height: 100%;
+  height: 600px;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  flex-direction: column;
+}
+
+.service_title {
+  width: 100%;
+  border: 1px solid white;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.type_services {
+  width: 100%;
+  border: 1px solid white;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.service {
+  background-color: whitesmoke;
+  width: 45%;
+  border-radius: 50px;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block_3 {
+  border: 1px solid green;
+  width: 1920px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients_box {
+  border: 1px solid yellow;
+  width: 95%;
+  height: 100%;
+  height: 700px;
+  display: flex;
+  /* align-items:; */
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.clients_box_title {
+  width: 100%;
+  border: 1px solid black;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7739e2;
+}
+
+.type_clinets {
+  width: 100%;
+  border: 1px solid black;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.clients {
+  background-color: #7739e2;
+  width: 400px;
+  height: 200px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* border: 10px solid black; */
+}
+
+.block_4 {
+  border: 1px solid green;
+  width: 1920px;
+  background-color: #7739e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.para {
+  border: 1px solid black;
+  width: 550px;
+  color: whitesmoke;
+  font-family: "pro_text";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  font-style: normal;
+  text-align: left;
+}
+
+.title_spilt {
+  border: 1px solid red;
+  width: 100%;
+  color: whitesmoke;
+  font-family: "pro_text";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  font-style: normal;
+  text-align: left;
+  display: flex;
+}
+
+.line_hr {
+  border: 1px solid black;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_home {
+  background-color: whitesmoke;
+  width: 240px;
+  height: 60px;
+
+  border-radius: 40px;
+  border: none;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  color: #b28af8;
+}
+
+/* .pics {
+  display: flex;
+  width: 95%;
+  border: 1px solid red;
+  height: 50%;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+}
+
+.pics_titles {
+  border: 1px solid green;
+  display: flex;
+  height: 20%;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+} */
+
+.clients_cont {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pic_title {
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
