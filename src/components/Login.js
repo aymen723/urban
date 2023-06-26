@@ -3,26 +3,41 @@ import "./login.css";
 import logo from "./logo.png";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 function Login() {
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+  const [userlogin, setuserlogin] = useState(null);
+  const navigate = useNavigate();
 
-  const[email,setemail]=useState("");
-  const[password,setpassword]=useState("");
-
-
-
-  function login(){
-
-     const info = {  
-      email:email,
-      password:password
-    }
+  function login() {
+    const info = {
+      email: email,
+      password: password,
+    };
+    let user = null;
 
     // console.log(logininfo);
-    axios.post("http://localhost:8080/Connecter",info).then((response)=>{
-      console.log(response)
-    })
+    axios
+      .post("http://localhost:8080/Connecter", info, { withCredentials: true })
+      .then((response) => {
+        setuserlogin(response.data);
+        user = response.data;
+        console.log(user);
 
+        if (user != null) {
+          navigate("/Profile", { state: { id: 1, color: "green" } });
+        }
+        // if (user != null) {
+        //   navigate("/Profile");
+        // }
+      });
   }
+
+  // if (user != null) {
+  //   return <Navigate to="/Profile" />;
+  // }
   return (
     <div className="login_container">
       <div className="background">
@@ -45,26 +60,37 @@ function Login() {
             <div className="box">
               <div className="input">
                 <div className="label_inp">
-                  <label className="header_inp"
-                >Address E-Mail</label>
+                  <label className="header_inp">Address E-Mail</label>
                 </div>
-                <input className="inp"  onChange={(e)=>{
-                    setemail(e.target.value)
-                  }}></input>
+                <input
+                  className="inp"
+                  onChange={(e) => {
+                    setemail(e.target.value);
+                  }}
+                ></input>
               </div>
               <div className="input">
                 <div className="label_inp">
-                  <label className="header_inp" >Mot de Passe</label>
+                  <label className="header_inp">Mot de Passe</label>
                 </div>
-                <input className="inp" type="password" onChange={(e)=>{
-                    console.log(e.target.value)
-                    setpassword(e.target.value)
-                  }}></input>
+                <input
+                  className="inp"
+                  type="password"
+                  onChange={(e) => {
+                    console.log(e.target.value);
+                    setpassword(e.target.value);
+                  }}
+                ></input>
               </div>
               <div className="btn_box">
-                <button className="btn_create_account" onClick={()=>{
-                  login();
-                }}>créer un compte</button>
+                <button
+                  className="btn_create_account"
+                  onClick={() => {
+                    login();
+                  }}
+                >
+                  créer un compte
+                </button>
                 <div className="btn_label">
                   <label className="footer_inp">
                     Vous avez un compte?<Link to="/Singup">Cliquez ici</Link>

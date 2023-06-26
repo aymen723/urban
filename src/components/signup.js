@@ -49,24 +49,22 @@ function Signup() {
     setwilayaent(e.target.value);
   }
 
-
-  function createentrepreneur(e){
+  function createentrepreneur(e) {
     // e.event.preventDefault();
-    const user = {  
-      name : noment,
-      surname : prenoment,
-      entp_name : entrepriseent,
-      email : emailent,
-      phone : telphonent,
-      password : passwordent,
-      state : Wilayaent
-    }
+    const user = {
+      name: noment,
+      surname: prenoment,
+      entp_name: entrepriseent,
+      email: emailent,
+      phone: telphonent,
+      password: passwordent,
+      state: Wilayaent,
+    };
 
-    axios.post("http://localhost:8080/User/Inscrire",user).then((response)=>{
-      console.log(response)
-    })
+    axios.post("http://localhost:8080/User/Inscrire", user).then((response) => {
+      console.log(response);
+    });
   }
-
 
   return (
     <div className="login_container">
@@ -237,9 +235,12 @@ function Signup() {
                   </div>
                 </div>
                 <div className="btn_box">
-                  <button className="btn_create_account" onClick={(e)=>{
-                    createentrepreneur(e);
-                  }}>
+                  <button
+                    className="btn_create_account"
+                    onClick={(e) => {
+                      createentrepreneur(e);
+                    }}
+                  >
                     créer un compte
                   </button>
                   <div className="btn_label">

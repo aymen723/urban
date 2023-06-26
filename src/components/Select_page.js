@@ -2,6 +2,7 @@ import React from "react";
 import "./select_page.css";
 import marker from "./marker.png";
 import shopping_cart from "./shopping-cart.png";
+import { Link } from "react-router-dom";
 
 function Select_page() {
   return (
@@ -14,6 +15,12 @@ function Select_page() {
           </h1>
         </div>
         <div className="selectors">
+          <div className="box_selection">
+            <img src={marker}></img>
+            <Link to={"/Description"}>
+              <button className="btn_selection">faisabilite social</button>
+            </Link>
+          </div>
           <div className="box_selection">
             <img src={marker}></img>
             <button className="btn_selection">études du marche</button>

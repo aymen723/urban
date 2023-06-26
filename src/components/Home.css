@@ -1,5 +1,5 @@
 .container_home {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   /* width: 100%; */
   /* height: 100%; */
   display: flex;
@@ -22,6 +22,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 }
 
 .buttons {
@@ -31,7 +32,21 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+
   padding-left: 100px;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 30px;
+  font-style: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+a {
+  color: #ffffff;
+
+  text-decoration: none; /* no underline */
 }
 
 .Sign {
@@ -51,7 +66,7 @@
   color: white;
 }
 .content {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   width: 100%;
   height: 800px;
   display: flex;
@@ -60,7 +75,7 @@
 }
 
 .titles {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 374px;
   width: 35%;
   display: flex;
@@ -79,13 +94,20 @@
 }
 
 .images {
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   height: 700px;
   width: 55%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./Ellipse\ 3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .block_2 {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: 1920px;
   background-color: #7739e2;
   display: flex;
@@ -95,14 +117,14 @@
 
 .box_block2 {
   width: 80%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 600px;
   display: flex;
   align-items: center;
 }
 
 .split {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   width: 50%;
   height: 100%;
   display: flex;
@@ -112,7 +134,7 @@
 }
 
 .service_box {
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   width: 90%;
   height: 100%;
   height: 600px;
@@ -124,7 +146,7 @@
 
 .service_title {
   width: 100%;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   height: 100px;
   display: flex;
   justify-content: center;
@@ -133,7 +155,7 @@
 
 .type_services {
   width: 100%;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   height: 250px;
   display: flex;
   align-items: center;
@@ -153,13 +175,13 @@
 .block_3 {
   border: 1px solid green;
   width: 1920px;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .clients_box {
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   width: 95%;
   height: 100%;
   height: 700px;
@@ -171,7 +193,7 @@
 
 .clients_box_title {
   width: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 100px;
   display: flex;
   justify-content: center;
@@ -181,7 +203,7 @@
 
 .type_clinets {
   width: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 500px;
   display: flex;
   align-items: center;
@@ -202,16 +224,18 @@
 }
 
 .block_4 {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: 1920px;
+  height: 600px;
   background-color: #7739e2;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .para {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 550px;
   color: whitesmoke;
   font-family: "pro_text";
@@ -223,7 +247,7 @@
 }
 
 .title_spilt {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   color: whitesmoke;
   font-family: "pro_text";
@@ -236,7 +260,7 @@
 }
 
 .line_hr {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 100px;
   display: flex;
   align-items: center;
@@ -290,4 +314,109 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+}
+
+.service_icon {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service_dec {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.service_plus {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 0px 50px 50px 0px;
+}
+
+.service_title {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.resaux_icon_footer {
+  border: 3px solid whitesmoke;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  width: 90%;
+  height: 100px;
+}
+
+.footer_box {
+  border: 1px solid whitesmoke;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_footer {
+  width: 20%;
+  /* border: 1px solid red; */
+  height: 100%;
+}
+
+.aboutus_footer {
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.text_footer {
+  /* border: 1px solid black; */
+  width: 22%;
+  height: 50%;
+  font-family: "pro_text";
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 26px;
+  font-style: normal;
+  text-align: left;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/* .ecplise1 {
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  width: 1542px;
+  height: 1542px;
+}
+.ecplise2 {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  z-index: -2;
+  width: 1542px;
+  height: 1542px;
+} */
+
+.home_profile {
+  border: 1px solid black;
 }

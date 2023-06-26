@@ -18,6 +18,9 @@ function Choice_page() {
           <h1 className="title_choice_font">les études de faisabilite</h1>
         </div>
         <div className="box_content">
+          <button className="btn_choice">la finistion des objectifs</button>{" "}
+        </div>
+        <div className="box_content">
           <Link to={"/Selection"}>
             <button className="btn_choice">
               faisabilité Socio-Environnementale
@@ -42,6 +45,9 @@ function Choice_page() {
           <button className="btn_choice">
             faisabilité strategique et commercial
           </button>{" "}
+        </div>
+        <div className="box_content">
+          <button className="btn_choice">Evaluation des risques</button>{" "}
         </div>
       </div>
     </div>

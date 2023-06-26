@@ -8,6 +8,12 @@ import Profile from "./Profile";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Description from "./Description";
 import Description2 from "./Description2";
+import Formaulaire from "./Formulaire";
+import Result from "./Result";
+import Thanks from "./Thanks";
+import Profileadmin from "./Profileadmin";
+import Payment from "./Payment";
+import Service from "./Service";
 
 function Layout() {
   return (
@@ -22,6 +28,14 @@ function Layout() {
         <Route path="/Selection" element={<Select_page />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Description" element={<Description />} />
+        <Route path="/Admin" element={<Profileadmin />} />
+        <Route path="/Payment" element={<Payment />} />
+        <Route path="/Service" element={<Service />} />
+
+        <Route path="/Formulaire/:id" element={<Formaulaire />} />
+        <Route path="/Thankyou" element={<Thanks />} />
+
+        <Route path="/Result" element={<Result />} />
 
         {/* </Route> */}
       </Routes>
