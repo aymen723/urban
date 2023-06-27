@@ -27,7 +27,15 @@ function Login() {
         console.log(user);
 
         if (user != null) {
-          navigate("/Profile", { state: { id: 1, color: "green" } });
+          if (user.admin === false) {
+            navigate("/Profile", {
+              state: { id: 1, color: "green" },
+            });
+          } else {
+            navigate("/Admin", {
+              state: { id: 1, color: "green" },
+            });
+          }
         }
         // if (user != null) {
         //   navigate("/Profile");

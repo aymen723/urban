@@ -68,6 +68,14 @@ function Profile() {
       });
   }
 
+  function deconnecter() {
+    axios.get("http://localhost:8080/Deconnecter").then((response) => {
+      console.log(response);
+      console.log(sessionStorage);
+      navigate("/login");
+    });
+  }
+
   useEffect(() => {
     getuserdata();
   }, []);
@@ -81,10 +89,11 @@ function Profile() {
           <div className="user_info">
             <div className="info_inp">
               <TextField
-                id="filled-basic"
+                color="secondary"
                 className="inp_profile"
+                id="standard-basic"
+                variant="standard"
                 label="Nom"
-                variant="filled"
                 size="small"
                 value={noment}
                 onChange={(e) => {
@@ -96,10 +105,11 @@ function Profile() {
             </div>
             <div className="info_inp">
               <TextField
-                id="filled-basic"
+                color="secondary"
                 className="inp_profile"
+                id="standard-basic"
+                variant="standard"
                 label="Prenom"
-                variant="filled"
                 size="small"
                 value={prenoment}
                 onChange={(e) => {
@@ -109,9 +119,10 @@ function Profile() {
             </div>
             <div className="info_inp">
               <TextField
-                id="filled-basic"
-                label="Nom entreprise"
-                variant="filled"
+                color="secondary"
+                className="inp_profile"
+                id="standard-basic"
+                variant="standard"
                 size="small"
                 value={entrepriseent}
                 onChange={(e) => {
@@ -121,10 +132,11 @@ function Profile() {
             </div>
             <div className="info_inp">
               <TextField
-                id="filled-basic"
+                color="secondary"
                 className="inp_profile"
+                id="standard-basic"
+                variant="standard"
                 label="Numéro"
-                variant="filled"
                 size="small"
                 value={telphonent}
                 onChange={(e) => {
@@ -134,10 +146,11 @@ function Profile() {
             </div>
             <div className="info_inp">
               <TextField
-                id="filled-basic"
+                color="secondary"
                 className="inp_profile"
+                id="standard-basic"
+                variant="standard"
                 label="Email"
-                variant="filled"
                 size="small"
                 value={emailent}
                 onChange={(e) => {
@@ -162,10 +175,11 @@ function Profile() {
             </div>
             <div className="info_inp">
               <TextField
-                id="filled-basic"
+                color="secondary"
                 className="inp_profile"
+                id="standard-basic"
+                variant="standard"
                 label="Willaya"
-                variant="filled"
                 size="small"
                 value={Wilayaent}
                 onChange={(e) => {
@@ -183,6 +197,14 @@ function Profile() {
                 className="btn_profile"
               >
                 Modifier
+              </button>
+              <button
+                onClick={() => {
+                  deconnecter();
+                }}
+                className="btn_dec"
+              >
+                Deconnecter
               </button>
             </div>
 
@@ -230,6 +252,9 @@ function Profile() {
                   <div className="project">
                     <div className="project_name">
                       <h3>{value.questoins[0].answers[0]}</h3>
+                    </div>
+                    <div className="project_link">
+                      <text>http://localhost:8080/{value.idstring}</text>
                     </div>
                     <div className="project_btn">
                       <button

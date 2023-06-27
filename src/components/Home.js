@@ -22,6 +22,7 @@ import ecplise2 from "./Ellipse 4.png";
 import profile from "./profile.png";
 import { useEffect } from "react";
 import axios from "axios";
+import social from "./socials.png";
 function Home() {
   const [user, setuser] = useState(null);
   useEffect(() => {
@@ -53,8 +54,10 @@ function Home() {
             </div>
           ) : (
             <div className="Sign">
-              <img src={profile}></img>
-              <div className="home_profile">profile</div>
+              <img style={{ width: "50px" }} src={profile}></img>
+              <Link to="/Profile">
+                <button className="btn">profile</button>
+              </Link>
             </div>
           )}
         </div>
@@ -78,7 +81,7 @@ function Home() {
       <div className="block_2">
         <div className="box_block2" id="block_1">
           <div className="split">
-            <img src={pic1} style={{}}></img>
+            <img src={pic1} style={{ width: "720px" }}></img>
           </div>
           <div className="split">
             <div className="title_spilt">
@@ -193,7 +196,7 @@ function Home() {
           </div>
           <div className="type_clinets">
             <div className="clients_cont">
-              <div className="clients">
+              <div style={{ backgroundColor: "#DCC7FF" }} className="clients">
                 <img src={pic2}></img>
               </div>
               <div className="pic_title">
@@ -201,7 +204,7 @@ function Home() {
               </div>
             </div>
             <div className="clients_cont">
-              <div className="clients">
+              <div style={{ backgroundColor: "#AACBFC" }} className="clients">
                 <img src={pic3}></img>
               </div>
               <div className="pic_title">
@@ -209,7 +212,7 @@ function Home() {
               </div>
             </div>
             <div className="clients_cont">
-              <div className="clients">
+              <div style={{ backgroundColor: "#FFC7E1" }} className="clients">
                 <img src={pic4}></img>
               </div>
               <div className="pic_title">
@@ -217,7 +220,7 @@ function Home() {
               </div>
             </div>
             <div className="clients_cont">
-              <div className="clients">
+              <div style={{ backgroundColor: "#FCFFCE" }} className="clients">
                 <img src={pic5}></img>
               </div>
               <div className="pic_title">
@@ -277,7 +280,12 @@ function Home() {
         </div>
 
         <div className="resaux_icon_footer">
-          <div></div>
+          <div>
+            <img src={social}></img>
+          </div>
+          <div>
+            <text>© 2020 — All Rights Reserved</text>
+          </div>
         </div>
       </div>
     </div>

@@ -55,7 +55,7 @@
   border: 1px solid red;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 /* .inp_profile {
@@ -189,4 +189,20 @@
   font-style: normal;
   text-align: center;
   color: whitesmoke;
+}
+.btn_dec {
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  background-color: red;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.project_link {
+  /* border: 1px solid red; */
 }
