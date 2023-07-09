@@ -268,6 +268,9 @@ function Profile() {
                       >
                         Détails
                       </button>
+                      <Link to={"/Payment"}>
+                        <button className="btn_profile">Payer</button>
+                      </Link>
                     </div>
                   </div>
                 );

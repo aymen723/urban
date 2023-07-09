@@ -13,7 +13,7 @@
 .box_select {
   width: 70%;
   height: 100%;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -23,7 +23,7 @@
 
 .selectors {
   width: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +31,7 @@
 .box_selection {
   width: 50%;
   height: 300px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-around;

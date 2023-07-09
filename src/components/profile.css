@@ -30,7 +30,7 @@
 }
 
 .profile_pic {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 20%;
   height: 100%;
   display: flex;
@@ -39,7 +39,7 @@
 }
 
 .user_info {
-  border: 3px solid black;
+  /* border: 3px solid black; */
   width: 80%;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -52,7 +52,7 @@
 
 .info_inp {
   /* width: 300px; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -64,7 +64,7 @@
 } */
 
 .project_box {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 100%;
   height: 50%;
   display: flex;
@@ -74,7 +74,7 @@
 
 .new_project_box {
   width: 20%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 100%;
   display: flex;
   justify-content: center;
@@ -84,7 +84,7 @@
 .all_project_box {
   width: 70%;
   height: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +93,7 @@
 
 .all_project {
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 85%;
   border-radius: 40px;
   background-color: transparent;
@@ -107,7 +107,7 @@
 
 .create_project {
   width: 90%;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   height: 95%;
   border-radius: 40px;
   background-color: white;
@@ -133,7 +133,7 @@
 }
 
 .list_project {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   background-color: transparent;
   width: 100%;
   height: 300px;

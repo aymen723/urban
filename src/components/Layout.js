@@ -14,6 +14,7 @@ import Thanks from "./Thanks";
 import Profileadmin from "./Profileadmin";
 import Payment from "./Payment";
 import Service from "./Service";
+import Type from "./Type";
 
 function Layout() {
   return (
@@ -31,6 +32,7 @@ function Layout() {
         <Route path="/Admin" element={<Profileadmin />} />
         <Route path="/Payment" element={<Payment />} />
         <Route path="/Service" element={<Service />} />
+        <Route path="/Type" element={<Type />} />
 
         <Route path="/Formulaire/:id" element={<Formaulaire />} />
         <Route path="/Thankyou" element={<Thanks />} />

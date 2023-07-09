@@ -21,7 +21,7 @@ const Payment = () => {
       </div>
       <div className="payment_box">
         <div className="payment_package">
-          <h3>Le montant : </h3> <h1> {"  "}10000 DA</h1>
+          <h2>Le montant en Dinar : </h2>
         </div>
         <div className="payment_choice">
           <img className="png_pay" src={baridi}></img>

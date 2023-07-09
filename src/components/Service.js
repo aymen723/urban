@@ -10,15 +10,17 @@ function Service() {
       <img src={shape_2} className="shape_2"></img>
 
       <div className="return_box">
-        <button className="return_btn"></button>
-        <label>retour</label>
+        <Link to={"/Profile"}>
+          <button className="return_btn">{"<"}</button>
+          <label>retour</label>
+        </Link>
       </div>
       <div className="box_choice">
         <div className="box_content">
           <h1 className="title_choice_font">les Service</h1>
         </div>
         <div className="box_content">
-          <Link to={"/Choice page"}>
+          <Link to={"/Type"}>
             <button className="btn_choice">
               Etude de faisabilite Complète
             </button>{" "}

@@ -56,7 +56,10 @@ function Home() {
             <div className="Sign">
               <img style={{ width: "50px" }} src={profile}></img>
               <Link to="/Profile">
-                <button className="btn">profile</button>
+                <button className="btnprofile">profile</button>
+              </Link>
+              <Link to="/login">
+                <button className="btnprofile">Connecter</button>
               </Link>
             </div>
           )}
@@ -133,9 +136,11 @@ function Home() {
                   faisabilité du projet qui est comme suit
                 </text>
               </div>
-              <div className="service_plus">
+              <Link to={"/login"} className="service_plus">
+                {/* <div> */}
                 <img src={puls}></img>
-              </div>
+                {/* </div> */}
+              </Link>
             </div>
             <div className="service">
               <div className="service_icon">
@@ -149,9 +154,11 @@ function Home() {
                   du développement du projet
                 </text>
               </div>
-              <div className="service_plus">
+              {/* <div className="service_plus"> */}
+              <Link to={"/login"} className="service_plus">
                 <img src={puls}></img>
-              </div>
+              </Link>
+              {/* </div> */}
             </div>
           </div>
           <div className="type_services">
@@ -195,38 +202,47 @@ function Home() {
             <h1>Nos Clients</h1>
           </div>
           <div className="type_clinets">
-            <div className="clients_cont">
-              <div style={{ backgroundColor: "#DCC7FF" }} className="clients">
-                <img src={pic2}></img>
+            <Link to={"login"} className="linkhome">
+              <div className="clients_cont">
+                <div style={{ backgroundColor: "#DCC7FF" }} className="clients">
+                  <img src={pic2}></img>
+                </div>
+                <div className="pic_title">
+                  <h1>Investisseur</h1>
+                </div>
               </div>
-              <div className="pic_title">
-                <h1>Investisseur</h1>
+            </Link>
+            <Link to={"login"} className="linkhome">
+              <div className="clients_cont">
+                <div style={{ backgroundColor: "#AACBFC" }} className="clients">
+                  <img src={pic3}></img>
+                </div>
+                <div className="pic_title">
+                  <h1>Entrepreneur</h1>
+                </div>
               </div>
-            </div>
-            <div className="clients_cont">
-              <div style={{ backgroundColor: "#AACBFC" }} className="clients">
-                <img src={pic3}></img>
+            </Link>
+            <Link to={"login"} className="linkhome">
+              <div className="clients_cont">
+                <div style={{ backgroundColor: "#FFC7E1" }} className="clients">
+                  <img src={pic4}></img>
+                </div>
+                <div className="pic_title">
+                  <h1>Etudaint</h1>
+                </div>
               </div>
-              <div className="pic_title">
-                <h1>Entrepreneur</h1>
+            </Link>
+
+            <Link to={"login"} className="linkhome">
+              <div className="clients_cont">
+                <div style={{ backgroundColor: "#FCFFCE" }} className="clients">
+                  <img src={pic5}></img>
+                </div>
+                <div className="pic_title">
+                  <h1>Direction Publique</h1>
+                </div>
               </div>
-            </div>
-            <div className="clients_cont">
-              <div style={{ backgroundColor: "#FFC7E1" }} className="clients">
-                <img src={pic4}></img>
-              </div>
-              <div className="pic_title">
-                <h1>Etudaint</h1>
-              </div>
-            </div>
-            <div className="clients_cont">
-              <div style={{ backgroundColor: "#FCFFCE" }} className="clients">
-                <img src={pic5}></img>
-              </div>
-              <div className="pic_title">
-                <h1>Direction Publique</h1>
-              </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

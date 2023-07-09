@@ -7,7 +7,7 @@
 
 .payment_background {
   background-color: #7739e2;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 50%;
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@
 
 .payment_box {
   width: 50%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100%;
   display: flex;
   align-items: center;
@@ -27,7 +27,7 @@
 .payment_package {
   width: 100%;
   height: 120px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -43,7 +43,7 @@
 .payment_choice {
   width: 100%;
   height: 150px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -52,7 +52,7 @@
 .payment_inp {
   width: 100%;
   height: 400px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -62,7 +62,7 @@
 .payment_btn {
   width: 100%;
   height: 100px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: center;
