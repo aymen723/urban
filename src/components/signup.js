@@ -3,6 +3,8 @@ import "./signup.css";
 import logo from "./logo.png";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 function Signup() {
   const [etudaint, setetudaint] = useState(false);
   const [entrepreneur, setentrepreneur] = useState(false);
@@ -14,6 +16,7 @@ function Signup() {
   const [telphonent, settelephonent] = useState(0);
   const [Wilayaent, setwilayaent] = useState("");
   const [passwordent, setpasswordent] = useState("");
+  const navigate = useNavigate();
 
   function nomhundler(e) {
     setnoment(e.target.value);
@@ -49,7 +52,7 @@ function Signup() {
     setwilayaent(e.target.value);
   }
 
-  function createentrepreneur(e) {
+  function createentrepreneur() {
     // e.event.preventDefault();
     const user = {
       name: noment,
@@ -59,10 +62,14 @@ function Signup() {
       phone: telphonent,
       password: passwordent,
       state: Wilayaent,
+      admin: false,
     };
 
-    axios.post("http://localhost:8080/User/Inscrire", user).then((response) => {
+    axios.post("http://localhost:8080/Inscrire", user).then((response) => {
       console.log(response);
+      if (response.data != null) {
+        navigate("/login");
+      }
     });
   }
 
@@ -238,7 +245,7 @@ function Signup() {
                   <button
                     className="btn_create_account"
                     onClick={(e) => {
-                      createentrepreneur(e);
+                      createentrepreneur();
                     }}
                   >
                     créer un compte
